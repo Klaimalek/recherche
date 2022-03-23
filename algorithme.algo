@@ -1,0 +1,26 @@
+FUNCTION binaire-search(tab: ARRAY_OF INTEGER[n];) : INTEGER
+VAR
+    m,debut,fin:INTEGER
+BEGIN
+    debut:=0;
+    fin:=tab.length-1;
+
+    WHILE (debut<fin) DO
+
+ m:= (debut+ fin)/2;
+
+ IF (tab[m]=x) THEN
+     return(m)
+ END_IF
+
+ IF (tab[m]<x) THEN
+     debut=m+1
+ELSE
+    fin=m-1
+ END_IF
+
+
+
+END_WHILE
+    RETURN x ;
+END
